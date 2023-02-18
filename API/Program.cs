@@ -1,3 +1,4 @@
+using BLL.Interfaces;
 using DAL.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -5,6 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddControllers();
 
 builder.Services.AddDbContext<StoreContext>(options =>
@@ -15,6 +17,27 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+SeedDatabase();
+
+async void SeedDatabase()
+{
+    using (var scope = app.Services.CreateScope())
+    try
+    {
+        var services = scope.ServiceProvider;
+        var loggerFactory = services.GetRequiredService<ILoggerFactory>();
+
+        var scopedContext = services.GetRequiredService<StoreContext>();
+        await scopedContext.Database.MigrateAsync();
+        await StoreContextSeed.SeedAsync(scopedContext, loggerFactory);
+    }
+    catch
+    {
+        throw;
+    }
+}
+    
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
