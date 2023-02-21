@@ -1,6 +1,7 @@
 ﻿using API.Errors;
 using BLL.Interfaces;
 using DAL.Data;
+using DAL.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Extensions
@@ -9,11 +10,10 @@ namespace API.Extensions
     {
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
+            services.AddScoped<ITokenService, TokenService>();
             services.AddScoped<IProductRepository, ProductRepository>();
-            //services.AddScoped<IBasketRepository, BasketRepository>();
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
-            // Following configuration is used to return constant error Response for Model Validation errors
             services.Configure<ApiBehaviorOptions>(options =>
             {
                 options.InvalidModelStateResponseFactory = actionContext =>
