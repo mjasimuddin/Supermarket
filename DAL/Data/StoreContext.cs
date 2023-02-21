@@ -7,8 +7,9 @@ namespace DAL.Data
 {
     public class StoreContext : DbContext
     {
-        public StoreContext(DbContextOptions<StoreContext> options) : base(options) { }
-
+        public StoreContext(DbContextOptions<StoreContext> options) : base(options)
+        {
+        }
 
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductBrand> ProductBrands { get; set; }
@@ -19,21 +20,23 @@ namespace DAL.Data
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
-            //if (Database.ProviderName == "Microsoft.EntityFrameworkCore.Sqlite")
+            // for sqlite database, we have converted datatype of decimal to double. This code will
+            // convert all values stored in decimal property to double type. Decimal datatype is 
+            // not supported in sqlite
+            //if (Database.ProviderName == "Microsoft.EntityFrameworkCore.SqlServer")
             //{
-            //    foreach (var item in modelBuilder.Model.GetEntityTypes())
+            //    foreach (var entityType in modelBuilder.Model.GetEntityTypes())
             //    {
-            //        var props = item.ClrType.GetProperties().Where(p => p.PropertyType == typeof(decimal));
-            //        var dateTimeProperties = item.ClrType.GetProperties().Where(p => p.PropertyType == typeof(DateTimeOffset));
-            //        foreach (var prop in props)
+            //        var properties = entityType.ClrType.GetProperties().Where(p => p.PropertyType
+            //        == typeof(decimal));
+
+            //        foreach (var property in properties)
             //        {
-            //            modelBuilder.Entity(item.Name).Property(prop.Name).HasConversion<double>();
-            //        }
-            //        foreach (var prop in dateTimeProperties)
-            //        {
-            //            modelBuilder.Entity(item.Name).Property(prop.Name).HasConversion(new DateTimeOffsetToBinaryConverter());
+            //            modelBuilder.Entity(entityType.Name).Property(property.Name)
+            //            .HasConversion<double>();
             //        }
             //    }
+
             //}
         }
     }
