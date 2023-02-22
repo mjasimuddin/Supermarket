@@ -1,6 +1,7 @@
 using API.Dtos;
 using AutoMapper;
 using BLL.Entites;
+using BLL.Entities.Identity;
 
 namespace API.Helpers
 {
@@ -15,6 +16,8 @@ namespace API.Helpers
                     source.MapFrom(src => src.ProductBrand.Name))
              .ForMember(dest => dest.PictureUrl, source =>
                     source.MapFrom<ProductUrlResolver>());
+
+            CreateMap<Address, AddressDTO>().ReverseMap();
         }
     }
 }

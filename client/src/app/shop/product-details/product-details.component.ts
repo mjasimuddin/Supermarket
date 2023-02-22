@@ -22,7 +22,6 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   loadProduct() {
-    debugger
     this.shopService.getProduct(this.id ).subscribe((response: IProduct) => {
       this.product =  response;
       // this.bcService.set('@productDetails', this.product.name);

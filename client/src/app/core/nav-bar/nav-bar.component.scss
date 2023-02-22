@@ -1,14 +1,14 @@
-.cart-no{
-    position:absolute;
+.cart-no {
+    position: absolute;
     min-height: 25px;
-    min-width:25px;
-    border-radius:50%;
-    font-size:1em;
-    background: blue;
-    color:white;
-    text-align:center;
-    top:-12px;
-    right:32px;
+    min-width: 25px;
+    border-radius: 50%;
+    font-size: 1em;
+    background: purple;
+    color: white;
+    text-align: center;
+    top: -12px;
+    right: 32px;
 }
 
 a {
@@ -16,14 +16,13 @@ a {
     color: #343a40;
 
     &.active {
-        color: orange;
+        color:blue;   
     }
 }
 
 .logo {
-    cursor:pointer;
-
+    cursor: pointer;
     &:focus {
-        outline:none;
+        outline: none;
     }
 }
