@@ -9,7 +9,7 @@ import { ShopComponent } from './shop/shop.component';
 
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
+  {path: '', component: HomeComponent, data: {breadcrumb: 'Home'}},
   {path: 'shop', loadChildren: () => import('./shop/shop.module').then(mod => mod.ShopModule)},
 
   // {path: 'not-found', component: NotFoundComponent, data: {breadcrumb: 'Not Found'}},
