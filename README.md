@@ -95,7 +95,7 @@ dotnet ef database update --context AppIdentityDbContext
 
 ## Database Location
 
-- [test](https://github.com/mjasimuddin/Supermarket/blob/master/client/src/assets/images/Database/supermarket_db.bak)
+- (https://github.com/mjasimuddin/Supermarket/blob/master/client/src/assets/images/Database/supermarket_db.bak)
 - https://github.com/mjasimuddin/Supermarket/blob/master/client/src/assets/images/Database/identity_db.bak
 
 
