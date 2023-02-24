@@ -1,13 +1,6 @@
-![.NET Core](https://github.com/rahulsahay19/eCommerce-App/workflows/.NET%20Core/badge.svg?branch=master)
+![.NET Core](https://github.com/mjasimuddin/Supermarket)
 
 # Ecommerce App using ASP.NET Core and Angular
-
-
-Hi Friends,
-
-During this lock-down period; I spent some time writing one full stack project using ASP.NET Core and Angular 9 with other best practices as explained below. I hope you like it.
-Demo Link:- https://sports-center.azurewebsites.net/
-Git Link:- https://github.com/rahulsahay19/eCommerce-App
 
 ## Introduction
 In this section, you will learn how to build full fledged Ecommerce app using asp.net core and angular 9. Below are the key takeaways from this project. Anyone who wants to learn and write professional enterpise projects can refer this project. This project not only illustrates how to implement all layers to the point rather it adheres to best practices as followed by industry.
@@ -18,7 +11,6 @@ Here, you will learn variety of technologies like
 -	Angular Routing
 -	Angular Reactive Forms
 -	Angular Creating a MultiStep form wizard
--	Payment gateway integration
 -	Angular Re-usable Reactive form components
 -	Angular validation 
 -	Async Validation
@@ -26,38 +18,24 @@ Here, you will learn variety of technologies like
 -	Angular
 -	C# Generics
 -	Repository Pattern
--	Unit of Work Pattern
--	Specification Pattern
--	Caching
 
-I have shipped two branches in Github. Master branch is meant for development cut and production is for finished product. While going through the code, you will see how to implement best practices using tons of client/server techniques. Here, you will see
+I have shipped master branches in Github. Here, I was used
  
--	How to use specification pattern in conjunction with Repository and Unit of Work pattern
--	How to use multiple DbContext to separate business logic with Identities
--	How to use JWTs token using ASP.NET Identity
--	How to load lazy loaded routes.
--	How to use Automapper
--	How to build a cool theme from bootstrap 
--	How to make use of Reactive Forms
--	How to create interceptors
--	How to implement Paging, Sorting, Searching and Filtering
--	How to implement caching both at client and server level
--	How to use Azure Redis Cache 
--	How to integrate payment gateway using Stripe
--	How to create reusable reactive forms
--	How to make use of Input and Output Binding
--	How to make use various observables
--	How to make use of Generics
--	How to create custom middlewares 
--	How to create custom application service extensions
--	How to persist data at service level
--	How to make API error handling more consistent and generic
--	How to seprate multi layer .net project with its responsibility 
--	How to create multi step form to complete the order
--	How to make use of angular material component with bootstrap
--	Accepting payments via Stripe using the new EU standards for 3D secure
--	Publishing the app on Azure
--	And many more things
+-	Multiple DbContext to separate business logic with Identities
+-	JWTs token using ASP.NET Identity
+-	Load lazy loaded routes.
+-	Automapper
+-	Cool theme from bootstrap 
+-	Reactive Forms
+-	interceptors
+-	Paging, Sorting, Searching and Filtering
+-	Reusable reactive forms
+-	Input and Output Binding
+-	Various observables
+-	Generics
+-	API error handling more consistent and generic
+-	Seprate multi layer .net project with its responsibility 
+-	Angular material component with bootstrap
 
 ## How Project is structured 
 
@@ -97,24 +75,32 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-This project is built using asp.net core 3.1. you can cd into API directory and say dotnet restore and  then dotnet watch run.
+This project is built using dotnet 7. you can cd into API directory and say dotnet restore and  then dotnet watch run.
+
+dotnet ef migrations add InitialCreate -p DAL -s API -o Data/Migrations
+cd API
+dotnet ef database update
+dotnet ef database drop -p DAL -s API
+
+Identity 
+dotnet ef migrations add IdentityInitial -p DAL -s API -c AppIdentityDbContext -o Identity/Migrations
+cd API
+dotnet ef database update --context AppIdentityDbContext
 
 ## Server Side Technologies
 
-- .Net Core
+- .Net 7
 - Generic Repository Patterns
-- Unit of Work Pattern
 - Specification Pattern
-- Azure Redis Cache
-- Sqlite during devlopment
-- Mysql in Production
+- Seed data
+- MSSQL in Production
 - Swagger
-- Stripe Implementation
+
 
 ## Client Side Technologies
 
-- Angular 9
-- Bootstrap 4
+- Angular 15
+- Bootstrap 5
 - ngx-bootstrap
 - Font Awesome
 - Lazy Loading
@@ -127,23 +113,8 @@ This project is built using asp.net core 3.1. you can cd into API directory and 
 
 This project is divided into branches. Master branch is development cut and production branch is production cut. In order to understand best practices and differences between them try comparing both.
 
-## Mobile UX
-
-Currently this project is not mobile friendly as I didn't get time to make it mobile compatible. In case, anyone interested, do submit PR.
-
-## PR and Comments
-
-I am open for extension of this project. Incase, if anyone wants to extend any feature, you can submit PR.
-
-## Stripe Test Cards
-
-You can also follow docs here https://stripe.com/docs/testing
-
-![13th](https://user-images.githubusercontent.com/3886381/80680373-3f708b80-8adc-11ea-9fa6-f9cf557c96a1.png)
 
 ## Glimpse of the working solution
-
-Demo Link:- https://sports-center.azurewebsites.net/
 
 ![1st](https://user-images.githubusercontent.com/3886381/80680036-b35e6400-8adb-11ea-8dc4-94ca34a1c222.png)
 
