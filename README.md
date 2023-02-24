@@ -73,6 +73,8 @@ dotnet ef database update --context AppIdentityDbContext
 ## Server Side Technologies
 
 - .Net 7
+- N-tier architecture.
+- Entity Framework (Code First)
 - Generic Repository Patterns
 - Specification Pattern
 - Seed data
@@ -90,6 +92,11 @@ dotnet ef database update --context AppIdentityDbContext
 - Caching
 - RXJS
 - Design Components
+
+## Database Location
+
+- [test](https://github.com/mjasimuddin/Supermarket/blob/master/client/src/assets/images/Database/supermarket_db.bak)
+- https://github.com/mjasimuddin/Supermarket/blob/master/client/src/assets/images/Database/identity_db.bak
 
 
 ## About the project
