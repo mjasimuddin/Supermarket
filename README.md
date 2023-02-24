@@ -41,37 +41,22 @@ I have shipped master branches in Github. Here, I was used
 
 Below, I have Pasted the high level glimpse project structure.
 
-![14th](https://user-images.githubusercontent.com/3886381/80864879-4f869780-8ca3-11ea-80b1-01481a1c895e.png)
+![14th](https://github.com/mjasimuddin/Supermarket/blob/master/client/src/assets/images/screenshot/API-archicture-1.png)
 
 APIs Structure goes like
 
-![16th](https://user-images.githubusercontent.com/3886381/80864882-51505b00-8ca3-11ea-81aa-260347d156ed.png)
+![16th](https://github.com/mjasimuddin/Supermarket/blob/master/client/src/assets/images/screenshot/API-archicture-2.png)
 
 Here, you will get Custom middleware implementation, extension methods, DTOs, Custom Error Handling and few Helper methods as well.
  
 Angular Project looks like 
 
-![17th](https://user-images.githubusercontent.com/3886381/80864883-51e8f180-8ca3-11ea-988a-b83f2ecfbeb6.png)
+![17th](https://github.com/mjasimuddin/Supermarket/blob/master/client/src/assets/images/screenshot/Clien_archicture_1.png)
 
-Here is the detailed feature-wise detailing of angular project.
 
-![18th](https://user-images.githubusercontent.com/3886381/80864885-52818800-8ca3-11ea-9cf9-5ff65da70210.png)
+# Client
 
-Then, we have Core implementation of project. This holds design pattern implementation like show below.
-
-![19th](https://user-images.githubusercontent.com/3886381/80864886-52818800-8ca3-11ea-8e1c-b1da3a1b15f5.png)
-
-Similarly, I have Infrastructure project which holds all repository, interface implementation. This also holds the seed project and data context as well.
-
-![20th](https://user-images.githubusercontent.com/3886381/80864887-531a1e80-8ca3-11ea-9fb2-651e4494a185.png)
-
-## Warning and Disclaimer
-
-Every effort applied to make this project complete and accurate to the topic, but no warranty is implied. Any implementation in this project are MY OWN and also borrowed from best practices segment. ALL content presented AS-IS, for learning purposes only. Author will not be liable for any loss or damages arising from the information presented in this project. This also involves stripe implementation. Just use test card as explained in readme not actual card. Incase, if any amount get deducted from actual card, author won't be responsible for any loss or damage. 
-
-## Client
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.1. You can cd into client folder and do npm i to install the packages then ng serve.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.6.
 
 ## Development server
 
@@ -111,32 +96,18 @@ dotnet ef database update --context AppIdentityDbContext
 
 ## About the project
 
-This project is divided into branches. Master branch is development cut and production branch is production cut. In order to understand best practices and differences between them try comparing both.
+Master branch is development cut and production branch is production cut. In order to understand best practices and differences between them try comparing both.
 
 
-## Glimpse of the working solution
+## Working solution
 
-![1st](https://user-images.githubusercontent.com/3886381/80680036-b35e6400-8adb-11ea-8dc4-94ca34a1c222.png)
+![1st](https://github.com/mjasimuddin/Supermarket/blob/master/client/src/assets/images/screenshot/home.png)
 
-![2nd](https://user-images.githubusercontent.com/3886381/80680044-b5c0be00-8adb-11ea-8ea7-9d0e4318bbf6.png)
+![2nd](https://github.com/mjasimuddin/Supermarket/blob/master/client/src/assets/images/screenshot/shop.png)
 
-![3rd](https://user-images.githubusercontent.com/3886381/80680050-b6f1eb00-8adb-11ea-8d47-a5d4f09fa7d2.png)
+![3rd](https://github.com/mjasimuddin/Supermarket/blob/master/client/src/assets/images/screenshot/shop_1.png)
 
-![4th](https://user-images.githubusercontent.com/3886381/80680053-b8231800-8adb-11ea-8be7-e0e3dba71dca.png)
+![4th](https://github.com/mjasimuddin/Supermarket/blob/master/client/src/assets/images/screenshot/login_page.png)
 
-![5th](https://user-images.githubusercontent.com/3886381/80680054-b8bbae80-8adb-11ea-95a2-5ec5e611691b.png)
 
-![6th](https://user-images.githubusercontent.com/3886381/80680056-b8bbae80-8adb-11ea-83e8-52e552842f97.png)
-
-![7th](https://user-images.githubusercontent.com/3886381/80680058-b9544500-8adb-11ea-8b6c-e4b274e65a9d.png)
-
-![8th](https://user-images.githubusercontent.com/3886381/80680060-b9ecdb80-8adb-11ea-9420-336fe8f76c12.png)
-
-![9th](https://user-images.githubusercontent.com/3886381/80680061-ba857200-8adb-11ea-9a2b-6a221e687a7d.png)
-
-![10th](https://user-images.githubusercontent.com/3886381/80680062-bb1e0880-8adb-11ea-9592-66c677b63702.png)
-
-![11th](https://user-images.githubusercontent.com/3886381/80680064-bb1e0880-8adb-11ea-963a-7a591aef9759.png)
-
-![12th](https://user-images.githubusercontent.com/3886381/80680067-bbb69f00-8adb-11ea-90c3-8682349cac0e.png)
 
