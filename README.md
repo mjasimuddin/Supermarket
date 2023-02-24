@@ -94,7 +94,7 @@ dotnet ef database update --context AppIdentityDbContext
 
 ## About the project
 
-Master branch is development cut and production branch is production cut. In order to understand best practices and differences between them try comparing both.
+Here is showing all products brandwise and typewise product also shwoing. Click any product then going to product details page. BreadCrumbs, lagylaoding, spinner, pagination, searching, shorting are also avilable here.
 
 
 ## Working solution
