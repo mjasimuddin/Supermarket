@@ -77,8 +77,8 @@ dotnet ef database update --context AppIdentityDbContext
 - Entity Framework (Code First)
 - Generic Repository Patterns
 - Specification Pattern
-- Seed data
-- MSSQL in Production
+- Seed Data (Product, Brand, Type) and (User authentication)
+- MSSQL Server
 - Swagger
 
 
