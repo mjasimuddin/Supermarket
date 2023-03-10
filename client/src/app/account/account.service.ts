@@ -12,8 +12,7 @@ import { IAddress } from '../shared/models/address';
 })
 export class AccountService {
   baseUrl = environment.apiUrl;
-  // We need to have something which won't emit initial value rather wait till it has something.
-  // Hence for that ReplaySubject. I have given to hold one user object and it will cache this as well
+  
   private currentUserSource = new ReplaySubject<IUser>(1);
   currentUser$ = this.currentUserSource.asObservable();
 

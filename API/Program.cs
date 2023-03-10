@@ -15,15 +15,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-//builder.Services.AddTransient<IProductRepository, ProductRepository>();
-//builder.Services.AddTransient<IGenericRepository<ProductBrand>, GenericRepository<ProductBrand>>();
-//builder.Services.AddTransient<IGenericRepository<ProductType>, GenericRepository<ProductType>>();
-//builder.Services.AddTransient<IGenericRepository<Product>, GenericRepository<Product>>();
-
-//builder.Services.AddTransient<ITokenService, TokenService>();
-
-
-
 builder.Services.AddControllers();
 
 builder.Services.AddDbContext<StoreContext>(options =>

@@ -2,7 +2,7 @@
 using BLL.Entites;
 using BLL.Specifications;
 
-namespace Core.Specifications
+namespace BLL.Specifications
 {
     public class ProductWithFiltersForCountSpecification : BaseSpecification<Product>
     {

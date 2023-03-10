@@ -5,7 +5,6 @@ using AutoMapper;
 using BLL.Entites;
 using BLL.Interfaces;
 using BLL.Specifications;
-using Core.Specifications;
 using DAL.Data;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

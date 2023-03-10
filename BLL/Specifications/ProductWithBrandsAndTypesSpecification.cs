@@ -3,7 +3,7 @@ using BLL.Specifications;
 using System;
 using System.Linq.Expressions;
 
-namespace Core.Specifications
+namespace BLL.Specifications
 {
     public class ProductWithBrandsAndTypesSpecification : BaseSpecification<Product>
     {

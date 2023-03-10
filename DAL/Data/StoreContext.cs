@@ -20,7 +20,6 @@ namespace DAL.Data
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
-            // for sqlite database, we have converted datatype of decimal to double. This code will
             // convert all values stored in decimal property to double type. Decimal datatype is 
             // not supported in sqlite
             //if (Database.ProviderName == "Microsoft.EntityFrameworkCore.SqlServer")
